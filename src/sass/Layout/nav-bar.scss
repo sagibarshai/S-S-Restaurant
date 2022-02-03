@@ -1,0 +1,38 @@
+.navbar{
+
+    &__container{
+
+        background-color: rgba(#d7bcb2, .9);
+        width: 70%;
+        min-height: 10vh;
+        position: fixed;
+        z-index: 1;
+        top:8%;
+        left:50%;
+        transform: translate(-50%,-50%);  
+        display: flex; 
+        justify-content: space-around;
+        border-radius: 5rem;
+    }
+&__link{
+    position: relative;
+    top:50%;
+    font-size: 1.6rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-decoration: none;
+    color:#3e160b;
+    align-self: center;
+    border-bottom: white 1px solid;
+    line-height: 4rem;
+    font-weight: 900;
+    transition: all 1.2s;
+    &:hover{
+        background-image: linear-gradient(to left ,  rgb(109, 31, 48),rgb(68, 159, 187));
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+        font-weight: 1000;
+        font-size: 1.9rem;
+    }
+}
+}

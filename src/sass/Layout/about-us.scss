@@ -1,0 +1,54 @@
+.about{
+min-height: 45vh;
+width: 100%;
+font-family: 'Montserrat Alternates', sans-serif;
+margin:0 auto;
+position: relative;
+
+&__title{
+    font-size: 3rem;
+    letter-spacing: .5rem;
+    opacity: 0.9;
+    transition: all 2s;
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    &:hover{
+        opacity: 1;
+        background-image: linear-gradient(to left ,  rgb(109, 31, 48),rgb(68, 159, 187));
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+        font-weight: 1000;
+        font-size: 3.5rem;
+        
+    }
+}
+&__content{
+    font-size: 2.5rem;
+    width: 40%; 
+    padding: 20rem 0;
+    line-height: 5rem;
+
+    
+}
+&__chef{
+    position: absolute;
+    top:20%;
+    left:5%;
+    max-width: 40%;
+
+}
+
+&__restaurant{
+position: absolute;
+top:20%;
+left:50%;
+max-width: 40%;
+
+}
+
+}
+
