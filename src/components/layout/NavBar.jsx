@@ -1,12 +1,13 @@
+import {Link} from 'react-router-dom'
+import FoodMenu from '../pages/FoodMenu';
 import '../../sass/Layout/nav-bar.scss';
 const NavBar = () => {
-return (<div className='navbar__container'>
-    <a className='navbar__link'href='food-menu' id="food-menu">| Food Menu |</a>
-    <a className='navbar__link'href='#' >| Wine & Drink Menu |</a>
-    <a className='navbar__link ' href='#' >| Order Take Away ! |</a>
-    <a className='navbar__link'href='#footer' >| Our Location |</a>
-    <a className='navbar__link'href='#footer' >| Content Us |</a>
-    <a className='navbar__link'href='#about-us' >| About Us |</a>
+return (<div className='navbar__container'> 
+    <Link className='navbar__link'to='/menu' >| Our Menu |</Link>
+    <Link className='navbar__link' to="/home-page" >| Order Take Away ! |</Link>
+    <Link className='navbar__link' to="/home-page" >| Our Location |</Link>
+    <Link className='navbar__link'to="/home-page" >| Content Us |</Link>
+    <Link className='navbar__link'to="/home-page" >| About Us |</Link>
 </div>)
 }
 export default NavBar;

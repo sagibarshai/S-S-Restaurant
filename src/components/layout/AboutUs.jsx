@@ -3,7 +3,7 @@ const AboutUs = () => {
 
     return (
         <div className="about" id='about-us'>
-            <h1 className="about__title">A little bit about us:</h1>
+            <h1 className="about__title">A little bit about us</h1>
             <div className='about__content'>
 
             <p className="  about__restaurant">S & S Restaurant Was established in 2010,

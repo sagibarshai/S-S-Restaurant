@@ -4,14 +4,9 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
-    margin-bottom: 10rem;
-    
-    
-    
-    
+    margin: 10rem auto;
 }
 .image-item{
-    
     margin:2rem;
     width: 22%;
     height:55%;
@@ -20,7 +15,7 @@
     margin-top: 10rem;
     &:hover{
         transform: scale(105%);
-        opacity: .7;
+        opacity: .5;
    }
 
 }

@@ -1,16 +1,19 @@
 .footer{
-height: 15vh;
-width: 100%;
+height: 13vh;
+width: 90%;
 background-color: rgba(#d7bcb2, .9);
 display: flex;
 align-items: center;
 justify-content: space-around;
 border-radius: 5rem;
+margin:0 auto;
 &__item{
     color:white;
     font-size: 1.5rem;
     font-family: 'Montserrat Alternates', sans-serif;
     transition: all 1.2s;
+    align-self:center;
+    
  &:hover{
     transform: skewX(-5deg) scale(1.1);
     background-image: linear-gradient(to left ,  rgb(58, 15, 15),rgb(185, 59, 80));
@@ -21,4 +24,14 @@ border-radius: 5rem;
     font-size: 1.8rem;
 }   
 }
+}
+.icon__mail{
+    width: 3rem;
+    height: 2rem;
+    position: relative;
+    margin:0 2rem;    
+   
+
+
+
 }
