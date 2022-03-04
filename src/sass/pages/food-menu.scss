@@ -1,0 +1,261 @@
+
+.container{
+    background-color: rgba(antiquewhite,.3);
+    width: 100%;
+    min-height: 100vh;
+    padding: 10rem 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+    transition: all 1s;
+
+}
+.flex-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    
+
+}
+.food-menu__title{
+    font-size: 6rem;
+    text-align: center;
+    padding-top:8rem ;
+    letter-spacing: 1rem;
+    margin:8rem auto 1rem auto;
+    border-bottom: white solid 5px;
+    display: inline-block;
+    position: relative;
+    top:20%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+    transition: all .8s;
+    &:hover{
+        opacity: 1;
+        background-image: linear-gradient(to left ,  rgb(109, 31, 48),rgb(68, 159, 187));
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+        font-weight: 1000;
+        border-bottom: grey solid 5px;
+    }
+    
+}
+.food-menu__subtitle{
+    font-size: 2.5rem;
+    width: 60%;
+    text-align: center;
+    margin:0 auto 1rem auto;
+    line-height: 4rem;
+}
+.button{
+    position: relative;
+    width: 26%;
+    max-height: 32rem;
+    border-style: none;
+    margin:2rem auto;
+    background-color: transparent;
+    margin: 200px auto;
+    transition: all .8s;
+    border-radius: 100%;
+&:hover{
+    .inner-text{
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%) scale(1.4);
+    }
+}
+   
+}
+.img-button{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0.7rem 1rem 1rem rgba(black,.6);
+    transition: all 1s;
+    opacity: .95;
+    align-items:center;
+    object-position: center;
+    border-radius: 10px;
+        
+    &:hover{
+        opacity: .7;
+        transform: scale(1.05) ;
+        cursor: pointer;
+        box-shadow: 0.7rem 1rem 2rem rgba(black,1);
+        
+    }
+}
+    .inner-text{
+        position: absolute;
+        color: white;
+        font-size: 5rem;
+        letter-spacing: .5rem;
+        font-family: 'Estonia', cursive;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        transition: all .8s;
+    }
+    .container-menu{
+        margin:1rem auto;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+           transition: all 2s;
+        &:hover{
+            .menu-image-name{
+                transform: translate(-50%,-50%);
+                top:28%;
+                left:50%;
+                border-bottom: 2px solid white;
+            }
+            .menu-image-description{
+            top:50%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+        }
+            .menu-image-price{
+                opacity: 1;
+            }
+            .menu-image{
+                opacity: .2;
+                transform: scale(1.1);
+                box-shadow: .8rem .8rem 1rem black;
+            }
+            .cart-button-container {
+                opacity: 1;
+                    transform: scale(1.1);
+                    // box-shadow: .8rem .8rem 1rem black;
+            }
+        }
+    }
+   
+    .menu{
+        position: absolute;
+        &-image{
+            width: 30rem;
+            height: 28rem;
+            margin: 12rem 3rem;
+            border-radius: .25rem;
+           box-shadow: .8rem .8rem 2rem rgba(255, 255, 255, 0.651);
+            transition: all 1.2s;
+            &-name{
+         z-index: 2;
+        font-size: 2rem;
+         position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        font-weight:bolder;
+        letter-spacing: .3rem;
+        transition: all 1.2s;
+        letter-spacing: .3rem;
+        
+    }
+    &-description{
+           position: absolute;
+           width:25rem;
+            text-align: center;
+           top:90%;
+           left: 50%;
+           transform: translate(-50%,-50%); 
+           color: black;
+           font-size: 1.5rem;
+            opacity: 1; 
+            letter-spacing: .5rem;    
+            transition: all 2s;
+            font-weight: 1000;
+            line-height: 2.5rem;
+
+       }
+       &-price{
+           font-size: 2.7rem;
+           position: absolute;
+        top:70%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-weight: 1000;
+        opacity: 0;
+            letter-spacing: .5rem;
+            transition: all 2s;
+        color: black;
+       }
+   }
+    }
+   
+    .cart-button-container {
+        position: absolute;
+        opacity: 0;    
+        top:90%;
+        left: 45%;    
+        transform: translate(-50%,-50%);
+        transition: all .8s;
+
+    }
+    .cart-button {
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        
+
+    }
+    .cart-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .button-text {
+        margin-left: 5px;
+        vertical-align: middle;
+
+    }
+    .cart-button-background-container {
+        position: fixed;
+        top:0%;
+        z-index: 3;
+        right:0;
+        transform: translate(-50%,50%);
+        transition: all 1.2s;
+        &:hover{
+            transform: translate(-50%,50%) scale(1.2);
+            top:0%;
+            right:0;
+            
+        }
+    }
+    .cart-icon-background {
+        width: 50px;
+        height: 50px;
+        color:transparent;
+        
+    }
+    .background-button-text {
+        font-weight: bold;
+        font-size: 1.5rem;
+        transition:  all 1.2s;
+    }
+    .cart-popup-container {
+        position: fixed;
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        width: 70%;
+        min-height: 50vh;
+        background-color: chocolate;
+        margin:0 auto;
+        z-index: 6;
+        opacity: 1;
+      
+    }
+    .blur{
+        transition: all 2s;
+        filter: blur(16px);
+        -webkit-filter: blur(16px); 
+    opacity: 0.7;   }
+    .content {
+        text-align: center;
+        background-color: bisque;
+        
+    }
+    h1{
+        font-size: 1rem;
+    }

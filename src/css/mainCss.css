@@ -1,3 +1,36 @@
+.navbar__container {
+  background-color: rgba(215, 188, 178, 0.9);
+  width: 70%;
+  min-height: 10vh;
+  position: fixed;
+  z-index: 1;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5rem; }
+
+.navbar__link {
+  position: relative;
+  top: 50%;
+  font-size: 1.6rem;
+  font-family: 'Montserrat Alternates', sans-serif;
+  text-decoration: none;
+  color: #3e160b;
+  align-self: center;
+  border-bottom: white 1px solid;
+  line-height: 4rem;
+  font-weight: 900;
+  transition: all .8s; }
+  .navbar__link:hover {
+    background-image: linear-gradient(to left, #6d1f30, #449fbb);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: 1000;
+    font-size: 1.9rem; }
+
 .header {
   height: 80vh;
   width: 100%;
@@ -28,7 +61,13 @@
     display: inline-block;
     color: black;
     font-family: 'Estonia', cursive;
-    animation: moveFromTop 2s; }
+    animation: moveFromTop 2s;
+    transition: all .8s; }
+    .header__title:hover {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(1.5deg) scale(1.25) skew(-6deg); }
 
 @keyframes moveFromTop {
   0% {
@@ -51,14 +90,23 @@
   margin: 0 auto;
   position: relative; }
   .about__title {
+    text-transform: uppercase;
     font-size: 3rem;
     letter-spacing: .5rem;
-    text-align: center;
     opacity: 0.9;
-    transition: all 2s; }
+    transition: all .8s;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%); }
     .about__title:hover {
-      transform: scaleY(120%);
-      opacity: 1; }
+      opacity: 1;
+      background-image: linear-gradient(to left, #6d1f30, #449fbb);
+      -webkit-background-clip: text;
+      color: transparent;
+      display: inline-block;
+      font-weight: 1000;
+      font-size: 3.5rem; }
   .about__content {
     font-size: 2.5rem;
     width: 40%;
@@ -81,41 +129,267 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
-  margin-bottom: 10rem;
-  border-radius: 150%;
-  overflow: hidden; }
+  margin: 10rem auto; }
 
 .image-item {
   margin: 2rem;
-  width: 20%;
-  height: 50%;
+  width: 22%;
+  height: 55%;
   border-radius: 150%;
-  transition: all 1s;
+  transition: all .5s;
   margin-top: 10rem; }
   .image-item:hover {
     transform: scale(105%);
-    opacity: .7; }
+    opacity: .5;
+    box-shadow: rgba(0, 0, 0, 0.4) 2rem 2rem 2rem; }
 
-.navbar__container {
+.footer {
+  height: 13vh;
+  width: 90%;
   background-color: rgba(215, 188, 178, 0.9);
-  width: 65%;
-  min-height: 10vh;
-  position: fixed;
-  z-index: 1;
-  top: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5rem;
+  margin: 0 auto; }
+  .footer__item {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+    transition: all .8s;
+    align-self: center; }
+    .footer__item:hover {
+      transform: skewX(-5deg) scale(1.1);
+      background-image: linear-gradient(to left, #3a0f0f, #b93b50);
+      -webkit-background-clip: text;
+      color: transparent;
+      display: inline-block;
+      font-weight: 1000;
+      font-size: 1.8rem; }
+    .footer__item:hover .icon {
+      transform: rotate(45deg) scale(1.4);
+      perspective: 2000px; }
+
+.icon {
+  width: 3rem;
+  height: 2rem;
+  position: relative;
+  margin: 0 2rem;
+  transition: all .8s; }
+
+.container {
+  background-color: rgba(250, 235, 215, 0.3);
+  width: 100%;
+  min-height: 100vh;
+  padding: 10rem 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+  transition: all 1s; }
+
+.flex-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap; }
+
+.food-menu__title {
+  font-size: 6rem;
+  text-align: center;
+  padding-top: 8rem;
+  letter-spacing: 1rem;
+  margin: 8rem auto 1rem auto;
+  border-bottom: white solid 5px;
+  display: inline-block;
+  position: relative;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: space-around; }
+  transition: all .8s; }
+  .food-menu__title:hover {
+    opacity: 1;
+    background-image: linear-gradient(to left, #6d1f30, #449fbb);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    font-weight: 1000;
+    border-bottom: grey solid 5px; }
 
-.navbar__link {
+.food-menu__subtitle {
+  font-size: 2.5rem;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto 1rem auto;
+  line-height: 4rem; }
+
+.button {
   position: relative;
+  width: 26%;
+  max-height: 32rem;
+  border-style: none;
+  margin: 2rem auto;
+  background-color: transparent;
+  margin: 200px auto;
+  transition: all .8s;
+  border-radius: 100%; }
+  .button:hover .inner-text {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.4); }
+
+.img-button {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0.7rem 1rem 1rem rgba(0, 0, 0, 0.6);
+  transition: all 1s;
+  opacity: .95;
+  align-items: center;
+  object-position: center;
+  border-radius: 10px; }
+  .img-button:hover {
+    opacity: .7;
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0.7rem 1rem 2rem black; }
+
+.inner-text {
+  position: absolute;
+  color: white;
+  font-size: 5rem;
+  letter-spacing: .5rem;
+  font-family: 'Estonia', cursive;
   top: 50%;
-  font-size: 1.6rem;
-  font-family: 'Montserrat Alternates', sans-serif;
-  text-decoration: none;
-  color: #3e160b;
-  align-self: center;
-  border-bottom: white 1px solid;
-  line-height: 4rem;
-  font-weight: 900; }
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .8s; }
+
+.container-menu {
+  margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  transition: all 2s; }
+  .container-menu:hover .menu-image-name {
+    transform: translate(-50%, -50%);
+    top: 28%;
+    left: 50%;
+    border-bottom: 2px solid white; }
+  .container-menu:hover .menu-image-description {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .container-menu:hover .menu-image-price {
+    opacity: 1; }
+  .container-menu:hover .menu-image {
+    opacity: .2;
+    transform: scale(1.1);
+    box-shadow: .8rem .8rem 1rem black; }
+  .container-menu:hover .cart-button-container {
+    opacity: 1;
+    transform: scale(1.1); }
+
+.menu {
+  position: absolute; }
+  .menu-image {
+    width: 30rem;
+    height: 28rem;
+    margin: 12rem 3rem;
+    border-radius: .25rem;
+    box-shadow: 0.8rem 0.8rem 2rem rgba(255, 255, 255, 0.651);
+    transition: all 1.2s; }
+    .menu-image-name {
+      z-index: 2;
+      font-size: 2rem;
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black;
+      font-weight: bolder;
+      letter-spacing: .3rem;
+      transition: all 1.2s;
+      letter-spacing: .3rem; }
+    .menu-image-description {
+      position: absolute;
+      width: 25rem;
+      text-align: center;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black;
+      font-size: 1.5rem;
+      opacity: 1;
+      letter-spacing: .5rem;
+      transition: all 2s;
+      font-weight: 1000;
+      line-height: 2.5rem; }
+    .menu-image-price {
+      font-size: 2.7rem;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 1000;
+      opacity: 0;
+      letter-spacing: .5rem;
+      transition: all 2s;
+      color: black; }
+
+.cart-button-container {
+  position: absolute;
+  opacity: 0;
+  top: 90%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  transition: all .8s; }
+
+.cart-button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none; }
+
+.cart-icon {
+  width: 35px;
+  height: 35px; }
+
+.button-text {
+  margin-left: 5px;
+  vertical-align: middle; }
+
+.cart-button-background-container {
+  position: fixed;
+  top: 0%;
+  z-index: 3;
+  right: 0;
+  transform: translate(-50%, 50%);
+  transition: all 1.2s; }
+  .cart-button-background-container:hover {
+    transform: translate(-50%, 50%) scale(1.2);
+    top: 0%;
+    right: 0; }
+
+.cart-icon-background {
+  width: 50px;
+  height: 50px;
+  color: transparent; }
+
+.background-button-text {
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: all 1.2s; }
+
+.cart-popup-container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70vh;
+  background-color: chocolate;
+  margin: 0 auto;
+  z-index: 6;
+  opacity: 1; }
+
+.blur {
+  transition: all 2s;
+  filter: blur(16px);
+  -webkit-filter: blur(16px);
+  opacity: 0.7; }

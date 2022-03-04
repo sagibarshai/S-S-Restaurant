@@ -2,20 +2,22 @@ import '../src/App.css'
 import ImageSection from './components/layout/ImageSection';
 import AboutUs from './components/layout/AboutUs';
 import Header from './components/layout/Header';
-import NavBar from './components/layout/NavBar';
+import NavBarHomePage from './components/layout/NavBarHomePage';
+import NavBarMenuPage from './components/layout/NavBarMenuPage';
 import Footer from './components/layout/Footer';
 import {Switch,Route,Redirect} from 'react-router-dom'
 import FoodMenu from './components/pages/FoodMenu';
-function App() {
+import {food} from './components/Data/allMenu'
+function App() {  
   return (
     <div>
-      {/* <Route>
-        <Redirect to="/home-page"/>
-      </Route> */}
+      <Route>
+        <Redirect to="/home-page" exact/>
+      </Route>
       <Switch>
 <Route path="/home-page" exact>
 
-      <NavBar/>
+      <NavBarHomePage/>
       <Header/>
     <AboutUs/>
     <ImageSection/>
@@ -24,10 +26,16 @@ function App() {
       </Switch>
       <Switch>
       <Route path="/menu" exact>
-        <NavBar/>
+        <NavBarMenuPage/>
       <FoodMenu/>
       <Footer/>
       </Route>
+      </Switch>
+      <Switch>
+        <Route path="/order-Ta" exact>
+          <NavBarHomePage/>
+          <Footer/>
+        </Route>
       </Switch>
     </div>
   );
