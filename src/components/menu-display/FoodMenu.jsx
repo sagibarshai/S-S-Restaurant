@@ -1,16 +1,19 @@
-import { food } from './../Data/allMenu';
 import '../../sass/pages/food-menu.scss'
 import React, {useState } from 'react';
-import DisplayMainFood from '../DisplayMainFood';
-import DisplayDesserts from './../DisplayDesserts';
-import DisplayDrinks from './../DisplayDrinks';
+import DisplayMenu from './DisplayMenu';
+import Cart from './Cart';
 const FoodMenu = () => {
     const [showFoodMenu,setShowFoodMenu] = useState(false)
     const [showDessertsMenu,setShowDessertsMenu] = useState(false)
     const [showDrinksMenu,setShowDrinksMenu] = useState(false)
     const [displayCart,setDisplayCart] = useState(false)
-    const allFood = food.allFood
-    const displayFoodHandler = () => {
+    const [cartIsUpdate, setCartIsUpdate] = useState(false)
+    let [cartSumIsUpdate , setCartSumIsUpdate] = useState(false)
+   let sum = localStorage.getItem('cartSum')
+    
+    
+
+const displayFoodHandler = () => {
         setShowFoodMenu(()=>!showFoodMenu)
     }
     const displayDessertHandler = () => {
@@ -21,23 +24,23 @@ const FoodMenu = () => {
     }
     const displayCartHandler = () => {
         setDisplayCart(()=>!displayCart)
+    }
+    function allStorage() {
 
-        
+        let values = [],
+            keys = Object.keys(localStorage).filter((key)=>{return key!=='cartSum'}),
+            i = keys.length   
+            console.log(keys)
+            
+        while ( i-- ) {
+            values.push( localStorage.getItem(keys[i]) );
+        }
+        values.filter(val=>val>0)
+        values = values.filter(val=>val>0);
+        return values.length 
     }
 return <div className='container'  >
-    {displayCart&&<div className="cart-popup-container">
-        {allFood.map((food,indx) => {
-            if(food.cart >0) {
-                return <div className='content' key={indx}>
-                <h1>{food.name}</h1>
-                <h1>{food.price*food.cart}</h1>
-                <h1>{food.cart}</h1>
-            </div>
-            }
-    
-        })}
-        
-    </div>}
+    {displayCart&&<Cart cartIsUpdate={cartIsUpdate} setCartIsUpdate={setCartIsUpdate} displayCart={displayCart} displayCartHandler={displayCartHandler} setCartSumIsUpdate={setCartSumIsUpdate} sum={sum} allStorage={allStorage}/>}
     <div className='cart-button-background-container'>
      <button className='cart-button' onClick={displayCartHandler}>
                     <svg className='cart-icon-background'> 
@@ -45,9 +48,11 @@ return <div className='container'  >
                     </svg>
                   </button>
                   <span className='background-button-text'>My Cart</span>
+                  <span className='cart-button-background__notifications'>
+                      <span className='cart-button-background__inner-text'>{allStorage()}</span>
+                      </span>
     </div>
-    <div className={displayCart? 'blur' : ''}>
-
+    <div>
     <h1 className='food-menu__title'>Menu </h1>
     <h3 className='food-menu__subtitle'> We offer a wide range of dishes of the highest quality.
 
@@ -68,9 +73,7 @@ And all this to ensure a great experience </h3>
         <img src='images/menu/macaroon.jpg' alt="dessert" className="img-button"/>
         <span className='inner-text'>Dessert</span>
     </a>
-        {showFoodMenu&&<DisplayMainFood/>}        
-        {showDessertsMenu&&<DisplayDesserts/>}
-        {showDrinksMenu&&<DisplayDrinks/>}        
+         <DisplayMenu showFoodMenu= {showFoodMenu} showDessertsMenu={showDessertsMenu} showDrinksMenu={showDrinksMenu} setCartIsUpdate={setCartIsUpdate} cartIsUpdate={cartIsUpdate} setCartSumIsUpdate={setCartSumIsUpdate} cartSumIsUpdate={cartSumIsUpdate} sum={sum}/>
     </div>
     </div>
 

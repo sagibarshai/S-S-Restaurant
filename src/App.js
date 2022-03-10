@@ -6,17 +6,15 @@ import NavBarHomePage from './components/layout/NavBarHomePage';
 import NavBarMenuPage from './components/layout/NavBarMenuPage';
 import Footer from './components/layout/Footer';
 import {Switch,Route,Redirect} from 'react-router-dom'
-import FoodMenu from './components/pages/FoodMenu';
-import {food} from './components/Data/allMenu'
+import FoodMenu from './components/menu-display/FoodMenu';
 function App() {  
   return (
     <div>
-      <Route>
+      {/* <Route>
         <Redirect to="/home-page" exact/>
-      </Route>
+      </Route> */}
       <Switch>
 <Route path="/home-page" exact>
-
       <NavBarHomePage/>
       <Header/>
     <AboutUs/>

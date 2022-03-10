@@ -1,0 +1,88 @@
+.cart-popup-container {
+    position:fixed;
+    right: 20rem;
+    top:36.5rem;
+    transform: translate(50%,-50%);
+    width: 25%;
+    height: 65vh;
+    background-color: rgba(#fff,1);
+    z-index: 6;
+    opacity: 1;
+    transition: all 2s;
+    overflow-y: scroll;
+    border-radius: 10px;
+    padding:2rem 0;
+}
+.cart-item {
+    font-family: 'Montserrat Alternates', sans-serif;
+    position: relative;
+    &__content {   
+        text-align:center;
+    }
+    &__name {
+        font-size: 1.6rem;
+        color:black;
+    }
+    &__amount {
+        color:black;
+        font-size: 1.2rem;
+    }
+    &__total {
+        color:black;
+        font-size: 1.3rem;
+    }
+    &__image {
+        margin-right:40px;
+        width: 12rem;
+        height: 12rem;
+        object-fit: cover;
+        position: absolute;
+        top:30%;
+        left:20%;
+        transform: translate(-50%,-50%);
+    }
+    &__text {
+        margin-left: 13rem;
+    }
+    &__button {
+        width:3rem;
+        height: 3rem;
+        background-color: white;
+        color:black;
+        font-size: 2rem;
+        border-radius: 10px;
+        box-shadow: .1rem .1rem .15rem black;
+        cursor: pointer;
+
+        &:not(:last-child){
+            margin-right: .7rem;
+    }
+}
+hr {
+    background-color: rgba(#d7bcb2, .9);
+    color:rgba(#d7bcb2, .9);
+} 
+}
+.cart__exit-button {
+position: sticky;
+top:0%;
+left:100%;
+transform: translate(-50%,-50%);
+background-color: whitesmoke;
+color:black;
+font-size: 1.5rem;
+border-radius: 20%;
+border:1px black solid;
+z-index: 7;
+transition: all .5s;
+&:hover {
+    cursor: pointer;
+    transform: scale(1.05) , translate(-50%,-50%);;
+    color:white;
+    background-color: black;
+}
+}
+.cart-popup__total-sum {
+    font-size: 2rem;
+    margin:3rem 0 ;
+}

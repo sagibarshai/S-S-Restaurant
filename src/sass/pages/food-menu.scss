@@ -210,15 +210,16 @@
     }
     .cart-button-background-container {
         position: fixed;
-        top:0%;
         z-index: 3;
-        right:0;
-        transform: translate(-50%,50%);
+        right: 12rem;
+        top:7rem;
+        transform: translate(50%,-50%);
         transition: all 1.2s;
+        
         &:hover{
-            transform: translate(-50%,50%) scale(1.2);
-            top:0%;
-            right:0;
+            right: 12rem;
+            top:7rem;
+        transform: translate(50%,-50%) scale(1.1);            
             
         }
     }
@@ -226,36 +227,41 @@
         width: 50px;
         height: 50px;
         color:transparent;
+        position: relative;
+        vertical-align: middle;
         
     }
     .background-button-text {
         font-weight: bold;
         font-size: 1.5rem;
         transition:  all 1.2s;
+        vertical-align: middle;
+
     }
-    .cart-popup-container {
-        position: fixed;
-        left:50%;
-        top:50%;
-        transform: translate(-50%,-50%);
-        width: 70%;
-        min-height: 50vh;
-        background-color: chocolate;
-        margin:0 auto;
-        z-index: 6;
-        opacity: 1;
-      
-    }
-    .blur{
-        transition: all 2s;
-        filter: blur(16px);
-        -webkit-filter: blur(16px); 
-    opacity: 0.7;   }
-    .content {
-        text-align: center;
-        background-color: bisque;
-        
-    }
-    h1{
-        font-size: 1rem;
-    }
+    .cart-button-background{
+        &__notifications{
+
+            background-color: rgb(109, 31, 48);
+            color:white;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 1.2rem;
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            position: absolute;
+            left:30%;
+            top:-25%;;
+        }
+        &__inner-text {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+        }
+    
+    
+    
+    
