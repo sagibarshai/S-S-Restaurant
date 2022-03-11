@@ -29,9 +29,7 @@ const displayFoodHandler = () => {
 
         let values = [],
             keys = Object.keys(localStorage).filter((key)=>{return key!=='cartSum'}),
-            i = keys.length   
-            console.log(keys)
-            
+            i = keys.length               
         while ( i-- ) {
             values.push( localStorage.getItem(keys[i]) );
         }
@@ -61,16 +59,16 @@ And all this to ensure a great experience </h3>
     <div className='flex-box'>
     <a className='button' onClick={displayFoodHandler} href="#food">
         
-        <img src='images/menu/alfredo-pasta.jpg' alt="pasta" className="img-button"/>
+        <img src='images/menu/burger.jpg' alt="pasta" className="img-button"/>
         <span className='inner-text'>Food Menu</span>
     </a>
     <a className='button'  href='#drinks' onClick={displayDrinksHandler} >
-        <img src='images/menu/wine.jpg' alt="wine" className="img-button"/>
+        <img src='images/menu/scotch.jpg' alt="wine" className="img-button"/>
         <span className='inner-text'>Wine and drinks</span>
     </a>
 
     <a href='#desserts' className='button' onClick={displayDessertHandler}>
-        <img src='images/menu/macaroon.jpg' alt="dessert" className="img-button"/>
+        <img src='images/menu/caramel-cake.jpg' alt="dessert" className="img-button"/>
         <span className='inner-text'>Dessert</span>
     </a>
          <DisplayMenu showFoodMenu= {showFoodMenu} showDessertsMenu={showDessertsMenu} showDrinksMenu={showDrinksMenu} setCartIsUpdate={setCartIsUpdate} cartIsUpdate={cartIsUpdate} setCartSumIsUpdate={setCartSumIsUpdate} cartSumIsUpdate={cartSumIsUpdate} sum={sum}/>

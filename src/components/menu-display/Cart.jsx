@@ -1,15 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import { food } from "../Data/allMenu";
+import PayForm from "../form/PayForm";
 import '../../sass/components/cart.scss'
 const allFood = food.allFood
 const desserts = food.desserts
 const drinks = food.drinks
 const Cart = ({cartIsUpdate , setCartIsUpdate , displayCart , displayCartHandler , setCartSumIsUpdate ,sum,allStorage}) => {
-
+let [moveToPay , setMoveToPay] = useState(false)
+const buttonPayHandler = () => {
+    setMoveToPay(()=>!moveToPay)
+}
 return <div>
-{<div className="cart-popup-container">
-{allStorage() <= 0 && <div>no items in cart!</div>}
-{ displayCart && <button className="cart__exit-button" onClick={displayCartHandler}>X</button>}
+{<div className="cart-popup__container">
+{allStorage() <= 0 && <p className="cart-popup__empty-cart">No Items In Cart!</p>}
+{ displayCart && <button className="cart-popup__exit-button" onClick={displayCartHandler}>X</button>}
 
 {allFood.map((food,indx) => {
     if(localStorage.getItem(food.name) > 0) {
@@ -146,9 +150,14 @@ return <div>
 })
 } 
 
-{sum > 0 && <div className="cart-popup__total-sum">pay now : {sum}₪</div>}
+{sum > 0 && <div>
+    <b className="cart-popup__total-sum">Amount to pay : {sum}₪</b>
+<button className="cart-popup__button-pay" onClick={buttonPayHandler}>Pay Now</button>
+</div>
+}
 </div>  
 }
+{moveToPay && <PayForm/>}
 </div>  
 
 }

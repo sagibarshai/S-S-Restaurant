@@ -196,6 +196,10 @@
         background-color: transparent;
         cursor: pointer;
         border: none;
+        transition: all 1s;
+        &:active,:link{
+            transform: scale(1.5) skewX(-10deg);
+        }
         
 
     }
@@ -240,7 +244,6 @@
     }
     .cart-button-background{
         &__notifications{
-
             background-color: rgb(109, 31, 48);
             color:white;
             display: inline-block;

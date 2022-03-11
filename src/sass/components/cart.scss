@@ -1,4 +1,6 @@
-.cart-popup-container {
+.cart-popup {
+    &__container{
+    text-align: center;
     position:fixed;
     right: 20rem;
     top:36.5rem;
@@ -13,6 +15,51 @@
     border-radius: 10px;
     padding:2rem 0;
 }
+&__exit-button {
+        width: 3rem;
+        height: 3rem;
+        position: sticky;
+        top:0%;
+        left:100%;
+        transform: translate(-50%,-50%);
+        background-color: darkgrey;
+        color:whitesmoke;
+        font-size: 1.5rem;
+        border-radius: 100%;
+        border:none;
+        z-index: 7;
+        transition: all .5s;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05) , translate(-50%,-50%);;
+            color:white;
+            background-color: black;
+        }
+        }
+        &__empty-cart {
+            font-size: 2rem;
+        }
+        &__total-sum {
+            font-size: 1.8rem;
+            margin-right:2rem;
+            
+        }
+        &__button-pay {
+            background-color: orange;
+            width: 10rem;
+            height: 5rem;
+            font-size: 1.5rem;
+            color:whitesmoke;
+            border:none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all .2s;
+            &:hover,:link,:active{
+                transform: scale(1.1) ;
+            }
+        }
+}
+
 .cart-item {
     font-family: 'Montserrat Alternates', sans-serif;
     position: relative;
@@ -47,15 +94,22 @@
     &__button {
         width:3rem;
         height: 3rem;
-        background-color: white;
-        color:black;
+        background-color: #f44336;
+        color:whitesmoke;
         font-size: 2rem;
         border-radius: 10px;
         box-shadow: .1rem .1rem .15rem black;
+        border: none;
         cursor: pointer;
-
         &:not(:last-child){
-            margin-right: .7rem;
+            margin-right: 1rem;
+    }
+    transition:  all .5s;
+    &:hover{
+        transform: scale(1.02) 
+    }
+    &:active{
+        transform: translateY(1.5px);;
     }
 }
 hr {
@@ -63,26 +117,4 @@ hr {
     color:rgba(#d7bcb2, .9);
 } 
 }
-.cart__exit-button {
-position: sticky;
-top:0%;
-left:100%;
-transform: translate(-50%,-50%);
-background-color: whitesmoke;
-color:black;
-font-size: 1.5rem;
-border-radius: 20%;
-border:1px black solid;
-z-index: 7;
-transition: all .5s;
-&:hover {
-    cursor: pointer;
-    transform: scale(1.05) , translate(-50%,-50%);;
-    color:white;
-    background-color: black;
-}
-}
-.cart-popup__total-sum {
-    font-size: 2rem;
-    margin:3rem 0 ;
-}
+
