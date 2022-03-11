@@ -61,13 +61,7 @@
     display: inline-block;
     color: black;
     font-family: 'Estonia', cursive;
-    animation: moveFromTop 2s;
-    transition: all .8s; }
-    .header__title:hover {
-      position: absolute;
-      top: 25%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(1.5deg) scale(1.25) skew(-6deg); }
+    animation: moveFromTop 2s; }
 
 @keyframes moveFromTop {
   0% {
@@ -344,7 +338,10 @@
 .cart-button {
   background-color: transparent;
   cursor: pointer;
-  border: none; }
+  border: none;
+  transition: all 1s; }
+  .cart-button:active, .cart-button :link {
+    transform: scale(1.5) skewX(-10deg); }
 
 .cart-icon {
   width: 35px;
@@ -356,40 +353,147 @@
 
 .cart-button-background-container {
   position: fixed;
-  top: 0%;
   z-index: 3;
-  right: 0;
-  transform: translate(-50%, 50%);
+  right: 12rem;
+  top: 7rem;
+  transform: translate(50%, -50%);
   transition: all 1.2s; }
   .cart-button-background-container:hover {
-    transform: translate(-50%, 50%) scale(1.2);
-    top: 0%;
-    right: 0; }
+    right: 12rem;
+    top: 7rem;
+    transform: translate(50%, -50%) scale(1.1); }
 
 .cart-icon-background {
   width: 50px;
   height: 50px;
-  color: transparent; }
+  color: transparent;
+  position: relative;
+  vertical-align: middle; }
 
 .background-button-text {
   font-weight: bold;
   font-size: 1.5rem;
-  transition: all 1.2s; }
+  transition: all 1.2s;
+  vertical-align: middle; }
 
-.cart-popup-container {
-  position: fixed;
-  left: 50%;
+.cart-button-background__notifications {
+  background-color: #6d1f30;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  position: absolute;
+  left: 30%;
+  top: -25%; }
+
+.cart-button-background__inner-text {
+  position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
-  width: 70%;
-  height: 70vh;
-  background-color: chocolate;
-  margin: 0 auto;
-  z-index: 6;
-  opacity: 1; }
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
-.blur {
+.cart-popup__container {
+  text-align: center;
+  position: fixed;
+  right: 20rem;
+  top: 36.5rem;
+  transform: translate(50%, -50%);
+  width: 25%;
+  height: 65vh;
+  background-color: white;
+  z-index: 6;
+  opacity: 1;
   transition: all 2s;
-  filter: blur(16px);
-  -webkit-filter: blur(16px);
-  opacity: 0.7; }
+  overflow-y: scroll;
+  border-radius: 10px;
+  padding: 2rem 0; }
+
+.cart-popup__exit-button {
+  width: 3rem;
+  height: 3rem;
+  position: sticky;
+  top: 0%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  background-color: darkgrey;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  border-radius: 100%;
+  border: none;
+  z-index: 7;
+  transition: all .5s; }
+  .cart-popup__exit-button:hover {
+    cursor: pointer;
+    transform: scale(1.05), translate(-50%, -50%);
+    color: white;
+    background-color: black; }
+
+.cart-popup__empty-cart {
+  font-size: 2rem; }
+
+.cart-popup__total-sum {
+  font-size: 1.8rem;
+  margin-right: 2rem; }
+
+.cart-popup__button-pay {
+  background-color: orange;
+  width: 10rem;
+  height: 5rem;
+  font-size: 1.5rem;
+  color: whitesmoke;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .2s; }
+  .cart-popup__button-pay:hover, .cart-popup__button-pay :link, .cart-popup__button-pay :active {
+    transform: scale(1.1); }
+
+.cart-item {
+  font-family: 'Montserrat Alternates', sans-serif;
+  position: relative; }
+  .cart-item__content {
+    text-align: center; }
+  .cart-item__name {
+    font-size: 1.6rem;
+    color: black; }
+  .cart-item__amount {
+    color: black;
+    font-size: 1.2rem; }
+  .cart-item__total {
+    color: black;
+    font-size: 1.3rem; }
+  .cart-item__image {
+    margin-right: 40px;
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%); }
+  .cart-item__text {
+    margin-left: 13rem; }
+  .cart-item__button {
+    width: 3rem;
+    height: 3rem;
+    background-color: #f44336;
+    color: whitesmoke;
+    font-size: 2rem;
+    border-radius: 10px;
+    box-shadow: .1rem .1rem .15rem black;
+    border: none;
+    cursor: pointer;
+    transition: all .5s; }
+    .cart-item__button:not(:last-child) {
+      margin-right: 1rem; }
+    .cart-item__button:hover {
+      transform: scale(1.02); }
+    .cart-item__button:active {
+      transform: translateY(1.5px); }
+  .cart-item hr {
+    background-color: rgba(215, 188, 178, 0.9);
+    color: rgba(215, 188, 178, 0.9); }
