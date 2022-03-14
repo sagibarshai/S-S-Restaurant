@@ -44,18 +44,52 @@
             margin-right:2rem;
             
         }
+       
+        &__edit-button-left-arrow {
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            top:5%;
+            left:5%;
+            font-size: 4.5rem;
+            color:black;
+            transition: all .5s;
+            &:hover , :link , :active {
+                transform: scale(1.15);
+                cursor: pointer;
+        }
+            }
         &__button-pay {
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+            vertical-align: middle;
             background-color: orange;
             width: 10rem;
             height: 5rem;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color:whitesmoke;
             border:none;
             border-radius: 10px;
             cursor: pointer;
             transition: all .2s;
+            &-inner-text{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+            }
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 5px 5px 5px grey;
+            }
+            &-inner-text {
             &:hover,:link,:active{
-                transform: scale(1.1) ;
+                    position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                }
             }
         }
 }
@@ -94,8 +128,8 @@
     &__button {
         width:3rem;
         height: 3rem;
-        background-color: #f44336;
-        color:whitesmoke;
+        background-color: lightgrey;
+        color:black;
         font-size: 2rem;
         border-radius: 10px;
         box-shadow: .1rem .1rem .15rem black;

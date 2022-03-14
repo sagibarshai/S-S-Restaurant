@@ -1,20 +1,28 @@
 import React, {useState} from "react";
 import { food } from "../Data/allMenu";
 import PayForm from "../form/PayForm";
-import '../../sass/components/cart.scss'
+import '../../sass/components/cart.scss';
 const allFood = food.allFood
 const desserts = food.desserts
 const drinks = food.drinks
-const Cart = ({cartIsUpdate , setCartIsUpdate , displayCart , displayCartHandler , setCartSumIsUpdate ,sum,allStorage}) => {
+const Cart = ({cartIsUpdate , setCartIsUpdate , displayCart , displayCartHandler , setCartSumIsUpdate ,sum,allStorage ,setFormIsValid , formIsValid}) => {
 let [moveToPay , setMoveToPay] = useState(false)
-const buttonPayHandler = () => {
-    setMoveToPay(()=>!moveToPay)
+// const [formIsValid , setFormIsValid] = useState(false)
+
+const moveToPayHandler = () => {
+    setMoveToPay(()=>true)
 }
+const backToEditHandler = () => {
+    setMoveToPay(()=>false)
+}
+
+
+
 return <div>
 {<div className="cart-popup__container">
-{allStorage() <= 0 && <p className="cart-popup__empty-cart">No Items In Cart!</p>}
+{allStorage() <= 0 && !formIsValid&& <p className="cart-popup__empty-cart">No Items In Cart!</p>}
 { displayCart && <button className="cart-popup__exit-button" onClick={displayCartHandler}>X</button>}
-
+{!moveToPay&& <div>
 {allFood.map((food,indx) => {
     if(localStorage.getItem(food.name) > 0) {
           let foodCart = localStorage.getItem(food.name)
@@ -31,6 +39,7 @@ return <div>
             sum+= food.price
             localStorage.setItem('cartSum', sum)
             setCartSumIsUpdate(()=>true)
+            
 
 
 }}>+</button>
@@ -134,7 +143,6 @@ return <div>
                 sum-= drink.price
                 localStorage.setItem('cartSum', sum)
                 setCartSumIsUpdate(()=>true)
-
             }
 
         }}>-</button>
@@ -152,12 +160,19 @@ return <div>
 
 {sum > 0 && <div>
     <b className="cart-popup__total-sum">Amount to pay : {sum}₪</b>
-<button className="cart-popup__button-pay" onClick={buttonPayHandler}>Pay Now</button>
+<button className="cart-popup__button-pay" onClick={moveToPayHandler}>Pay Now</button>
 </div>
 }
+</div>}
+{moveToPay&& <div>
+   {!formIsValid&& <button className="cart-popup__edit-button-left-arrow" onClick={backToEditHandler}> &#x2190;</button>}
+    <br/>
+    <br/>
+    <br/>
+<PayForm sum={sum} formIsValid={formIsValid} setFormIsValid={setFormIsValid} />
+    </div>}
 </div>  
 }
-{moveToPay && <PayForm/>}
 </div>  
 
 }

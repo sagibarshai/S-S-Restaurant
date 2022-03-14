@@ -7,6 +7,7 @@ import NavBarMenuPage from './components/layout/NavBarMenuPage';
 import Footer from './components/layout/Footer';
 import {Switch,Route,Redirect} from 'react-router-dom'
 import FoodMenu from './components/menu-display/FoodMenu';
+import PayForm from './components/form/PayForm';
 function App() {  
   return (
     <div>
@@ -28,12 +29,6 @@ function App() {
       <FoodMenu/>
       <Footer/>
       </Route>
-      </Switch>
-      <Switch>
-        <Route path="/order-Ta" exact>
-          <NavBarHomePage/>
-          <Footer/>
-        </Route>
       </Switch>
     </div>
   );

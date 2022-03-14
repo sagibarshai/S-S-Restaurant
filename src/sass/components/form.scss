@@ -1,0 +1,61 @@
+.form {
+   &__container {
+       margin-top:5rem;
+        position: relative;
+        font-family: 'Montserrat Alternates', sans-serif;
+        
+    } 
+    &__welcome {
+    margin: 5rem auto;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    }
+  &__label {
+      margin:0 auto;
+      font-size: 2rem;
+      color:black;
+      display: block;
+      margin-bottom:2rem;
+      &-radio{
+          font-size: 1.3rem;
+          display: inline-block;
+      }
+    }
+    
+    &__input {
+        margin:0 auto;
+        &-radio{
+            display: inline-block;
+            margin:4rem 3rem;
+            width: 2rem;
+            height: 2rem;
+        }
+        margin-bottom:4rem;
+      display: block;
+      width: 80%;
+      height: 4rem;
+      border-radius: 10px;
+      &::placeholder{
+        color:black;
+        text-align: center;
+        letter-spacing: 3px;
+      }
+  }
+  &__recipt {
+    &-container{
+    position: absolute;
+  
+  }
+  &-text {
+    margin:0 auto;
+    font-size: 1.7rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    width: 80%;
+  }
+}
+}
+input[type="month" i] {
+text-align: center;
+letter-spacing: 2px;
+}

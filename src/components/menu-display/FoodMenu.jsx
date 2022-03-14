@@ -9,6 +9,8 @@ const FoodMenu = () => {
     const [displayCart,setDisplayCart] = useState(false)
     const [cartIsUpdate, setCartIsUpdate] = useState(false)
     let [cartSumIsUpdate , setCartSumIsUpdate] = useState(false)
+    const [formIsValid , setFormIsValid] = useState(false)
+
    let sum = localStorage.getItem('cartSum')
     
     
@@ -37,11 +39,12 @@ const displayFoodHandler = () => {
         values = values.filter(val=>val>0);
         return values.length 
     }
-return <div className='container'  >
-    {displayCart&&<Cart cartIsUpdate={cartIsUpdate} setCartIsUpdate={setCartIsUpdate} displayCart={displayCart} displayCartHandler={displayCartHandler} setCartSumIsUpdate={setCartSumIsUpdate} sum={sum} allStorage={allStorage}/>}
+return <div className='container'>
+
+    {displayCart&&<Cart cartIsUpdate={cartIsUpdate} setCartIsUpdate={setCartIsUpdate} displayCart={displayCart} displayCartHandler={displayCartHandler} setCartSumIsUpdate={setCartSumIsUpdate} sum={sum} allStorage={allStorage} setFormIsValid={setFormIsValid} formIsValid={formIsValid}/>}
     <div className='cart-button-background-container'>
      <button className='cart-button' onClick={displayCartHandler}>
-                    <svg className='cart-icon-background'> 
+         <svg className='cart-icon-background'> 
                     <use xlinkHref="images/icons/sprite.svg#icon-cart"></use>
                     </svg>
                   </button>
@@ -56,15 +59,17 @@ return <div className='container'  >
 
 All dishes are made from fresh ingredients.
 And all this to ensure a great experience </h3>
+        
     <div className='flex-box'>
+
     <a className='button' onClick={displayFoodHandler} href="#food">
         
         <img src='images/menu/burger.jpg' alt="pasta" className="img-button"/>
-        <span className='inner-text'>Food Menu</span>
+        <span className='inner-text'>Food</span>
     </a>
     <a className='button'  href='#drinks' onClick={displayDrinksHandler} >
         <img src='images/menu/scotch.jpg' alt="wine" className="img-button"/>
-        <span className='inner-text'>Wine and drinks</span>
+        <span className='inner-text'>Wine & drinks</span>
     </a>
 
     <a href='#desserts' className='button' onClick={displayDessertHandler}>
@@ -75,6 +80,7 @@ And all this to ensure a great experience </h3>
     </div>
     </div>
 
-</div>
+</div> 
+
 }
 export default FoodMenu;

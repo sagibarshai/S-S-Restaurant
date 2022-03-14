@@ -69,7 +69,7 @@
 .img-button{
     width: 100%;
     height: 100%;
-    box-shadow: 0.7rem 1rem 1rem rgba(black,.6);
+    box-shadow: 2rem 2rem 2rem rgba(lightgrey,.6);
     transition: all 1s;
     opacity: .95;
     align-items:center;
@@ -80,16 +80,15 @@
         opacity: .7;
         transform: scale(1.05) ;
         cursor: pointer;
-        box-shadow: 0.7rem 1rem 2rem rgba(black,1);
+        box-shadow: 0.7rem 1rem 2rem rgba(lightgrey,1);
         
     }
 }
     .inner-text{
         position: absolute;
         color: white;
-        font-size: 5rem;
+        font-size: 3rem;
         letter-spacing: .5rem;
-        font-family: 'Estonia', cursive;
         top:50%;
         left:50%;
         transform: translate(-50%,-50%);
@@ -124,7 +123,6 @@
             .cart-button-container {
                 opacity: 1;
                     transform: scale(1.1);
-                    // box-shadow: .8rem .8rem 1rem black;
             }
         }
     }
@@ -132,10 +130,11 @@
     .menu{
         position: absolute;
         &-image{
-            width: 30rem;
-            height: 28rem;
+            object-fit:cover;
+            width: 35rem;
+            height: 30rem;
             margin: 12rem 3rem;
-            border-radius: .25rem;
+            border-radius: .75rem;
            box-shadow: .8rem .8rem 2rem rgba(255, 255, 255, 0.651);
             transition: all 1.2s;
             &-name{
@@ -264,7 +263,4 @@
             transform: translate(-50%,-50%);
         }
         }
-    
-    
-    
     
