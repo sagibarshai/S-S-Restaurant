@@ -39,7 +39,7 @@ const displayFoodHandler = () => {
         values = values.filter(val=>val>0);
         return values.length 
     }
-return <div className='container'>
+return <div className='container'onClick={()=>formIsValid && window.location.reload()}>
 
     {displayCart&&<Cart cartIsUpdate={cartIsUpdate} setCartIsUpdate={setCartIsUpdate} displayCart={displayCart} displayCartHandler={displayCartHandler} setCartSumIsUpdate={setCartSumIsUpdate} sum={sum} allStorage={allStorage} setFormIsValid={setFormIsValid} formIsValid={formIsValid}/>}
     <div className='cart-button-background-container'>
@@ -62,7 +62,7 @@ And all this to ensure a great experience </h3>
         
     <div className='flex-box'>
 
-    <a className='button' onClick={displayFoodHandler} href="#food">
+    <a className='button' onClick={displayFoodHandler} href="#food" onChange={()=>{return console.log('hello')}}>
         
         <img src='images/menu/burger.jpg' alt="pasta" className="img-button"/>
         <span className='inner-text'>Food</span>

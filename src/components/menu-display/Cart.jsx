@@ -7,7 +7,6 @@ const desserts = food.desserts
 const drinks = food.drinks
 const Cart = ({cartIsUpdate , setCartIsUpdate , displayCart , displayCartHandler , setCartSumIsUpdate ,sum,allStorage ,setFormIsValid , formIsValid}) => {
 let [moveToPay , setMoveToPay] = useState(false)
-// const [formIsValid , setFormIsValid] = useState(false)
 
 const moveToPayHandler = () => {
     setMoveToPay(()=>true)
@@ -169,10 +168,11 @@ return <div>
     <br/>
     <br/>
     <br/>
-<PayForm sum={sum} formIsValid={formIsValid} setFormIsValid={setFormIsValid} />
+<PayForm sum={sum} formIsValid={formIsValid} setFormIsValid={setFormIsValid} setMoveToPay={setMoveToPay} setCartIsUpdate={setCartIsUpdate} />
     </div>}
 </div>  
 }
+{/* {formIsValid && window.location.reload()} */}
 </div>  
 
 }

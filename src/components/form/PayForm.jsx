@@ -1,5 +1,4 @@
 import react, {useState,useRef} from "react";
-import Cart from "../menu-display/Cart";
 import '../../sass/components/form.scss'
 const PayForm = ({sum ,formIsValid , setFormIsValid }) => {
     const [ta, setTa] = useState(false)
@@ -14,6 +13,9 @@ const PayForm = ({sum ,formIsValid , setFormIsValid }) => {
     let cardInput = useRef(null)
     let expiryDate = useRef(null)
     let cvc = useRef(null)
+    function savePrevBuy () {
+        formIsValid && localStorage.setItem(getRandomString(3) ,`name: ${firstNameInput.current.value} addres : ${addresInput.current.value} id: ${getRandomString(3)}`)
+    }
     function getRandomString(length) {
         var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         var result = '';
@@ -78,8 +80,7 @@ const PayForm = ({sum ,formIsValid , setFormIsValid }) => {
         setPickFromReasturant(()=>true)
         setTa(()=>false)
     }
-    const submitFormHandler = (event) => {
-        event.preventDefault()
+    const submitFormHandler = () => {
        if(!ta && !pickFromReasturant) alert(`pick one option: Pick Up or TA`)
        else{
            firstNameHandler()
@@ -88,12 +89,10 @@ const PayForm = ({sum ,formIsValid , setFormIsValid }) => {
            expiryDateHandler()
            cvcHandler()
            if(( (ta &&!pickFromReasturant) && nameIsValid  &&addresIsValid &&cardIsValid && expiryDateIsValid && cvcIsVaild) || ((!ta &&pickFromReasturant) && nameIsValid &&cardIsValid && expiryDateIsValid && cvcIsVaild)) {
-            setFormIsValid(()=>true)
+            setFormIsValid(true)
             localStorage.clear()
-
-           }
         }
-      
+    } 
     }
 
 return <form className="form__container">
@@ -107,7 +106,7 @@ return <form className="form__container">
     {ta && !pickFromReasturant && <div>
          <h2 className="form__welcome">Welcome to TA order</h2> 
     <label className="form__label" htmlFor="first-name" >First Name</label>
-    <input className="form__input" id="first-name"  placeholder="First Name" ref={firstNameInput}/>
+    <input className="form__input" id="first-name"  placeholder="First Name" ref={firstNameInput} />
          <label className="form__label" htmlFor="addres">Addres</label>
          <input className="form__input" type="text" placeholder="Fill Your Addres" id="addres" ref={addresInput}/>
     </div>}
@@ -128,11 +127,11 @@ return <form className="form__container">
     <br/>
     <br/>
     <input type="submit" value="submit" className="cart-popup__button-pay" onClick={submitFormHandler}/>
-</div>}
-{ formIsValid && <div className="form__recipt-container" onChange={()=> {setFormIsValid(()=>false)}}>
-  <p className="form__recipt-text"> hello {firstNameInput.current.value !==null ? firstNameInput.current.value : ''} 
-  </p>
-        {ta ? <p className="form__recipt-text">your order rich to {addresInput.current.value !==null ? addresInput.current.value : ''} in 30min</p> : ''} <br/>
+</div>} 
+
+{ firstNameInput.current !==null && formIsValid && <div className="form__recipt-container" >
+  <p className="form__recipt-text"> hello {firstNameInput.current.value}  </p>
+        {addresInput.current !==null && ta ? <p className="form__recipt-text">your order rich to {addresInput.current.value} in 30min</p> : ''} <br/>
         <p className="form__recipt-text">your id order is {getRandomString(10)} please keep it if there is some problem <br/>
         we thankful for your buy <br/> <br/> S & S Team ✌️ </p>
         </div>}
