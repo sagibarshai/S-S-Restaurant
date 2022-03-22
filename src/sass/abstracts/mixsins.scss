@@ -1,8 +1,0 @@
-@mixin respond ($brakepoint) {
-    @if $brakepoint == "bigDesktop" {
-        @media (max-width:2200px){
-            @content
-        }
-    }
-    }
-  

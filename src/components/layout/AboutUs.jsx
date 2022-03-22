@@ -8,12 +8,10 @@ const AboutUs = () => {
 
             <p className="  about__restaurant">S & S Restaurant Was established in 2010,
             The restaurant is aimed at different kitchens with authentic flavors.
-            In the restaurant you will find a pleasant experience, delicious food, good wine and an amazing atmosphere
-            We will be happy to host you!
+            In the restaurant you will find a pleasant experience, delicious food, good wine and an amazing vibe
             </p>
-            <p className=" about__chef"> S & S Restaurant is led by Chef Johan Mazor, who specializes in authentic dishes in the highest form.
-            Johan Mazur is rated 5 stars as a chef and has 2 Michelin restaurants. </p>
-            <span className="about__stars__logo"></span>
+            <p className=" about__chef"> The kitchen of the S & S restaurant is lead by chef Johan Mazor, specializes in authentic dishes
+            Johan Mazur is rated 5 stars as a chef and is the chef of two Michelin restaurants in the world. </p>
             </div>
             
 

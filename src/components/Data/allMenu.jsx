@@ -2,24 +2,24 @@
       //fish
     allFood:[
         {
-                name:'Grilled salmon teriyaki',
-                imgSrc:"images/menu/salmon.jpg" ,
-                description: 'Juicy salmon fillet is served in a medium degree with steamed vegetables' ,
+                name:'Cheesy Spinach Cups',
+                imgSrc:"images/menu/vegetable-pastry.jpg" ,
+                description: 'Cheesy Spinach Cups with vegetable and cheese  ' ,
                 price: 89,
                 cart:0
                          },
                          {
-                             name:'Danis',
-                             imgSrc:"images/menu/danis.jpg",
-                             description: 'Baked and fried Dennis fish',
+                             name:'Salmon',
+                             imgSrc:"images/menu/salmon.jpg",
+                             description: 'Grilled Salmon with cream tomato and spinach sauce   ',
                              price: 78 ,
                              cart:0
 
                             },
                             {
-                                name:'Beef fillet',
+                                name:'Beef Fillet',
                                 imgSrc:"images/menu/fillet.jpg",
-                                description: 'Vegetable vintage red tuna served with green and white onions',
+                                description: 'Beef Fillet served with cherry cream on top of cubes of sweet potato',
                                 price: 99,
                                 cart:0
 
@@ -27,7 +27,7 @@
             {
                 name:'Beef Fillet Carpaccio',
                 imgSrc:"images/menu/Carpaccio.jpg" ,
-                description: 'Beef fillet carpaccio served with green leaves and Parmesan cheese',
+                description: 'Served on top of rocket leaves with parmesan cheese',
                 price: 58,
                 cart:0
 
@@ -35,7 +35,7 @@
             {
                     name:'S & S Burger',
                     imgSrc:"images/menu/burger.jpg" ,
-                    description: '250 grams of juicy hamburger, served with cheese sauce and French fries',
+                    description: '250 G of juicy burger, served with cheese , French fries and home made sauce',
                     price: 69,
                     cart:0
 
@@ -43,7 +43,7 @@
             {
                         name:'Chicken Snacks',
                         imgSrc:"images/menu/chickenSnacks.jpg"  ,
-                        description: 'Chicken breast coated in bread crumbs served with French fries and salad',
+                        description: 'Chicken snacks with homemade sauce',
                         price: 45,
                         cart:0
 
@@ -51,14 +51,14 @@
             {
                             name:'Entrecote',
                             imgSrc:"images/menu/entrecote.jpg"  ,
-                            description: 'Entrecote is served with roasted vegetables with rosemary',
+                            description: 'Smoked Entrecote made in oven over coals',
                             price: 99,
                             cart:0
                         },
             {  
                                 name:'Schnitzel',
                                 imgSrc:"images/menu/schnitzel.jpg" ,
-                                description: 'Crispy schnitzel served with rice and stir-fried vegetables',
+                                description: 'Deep-fried crispy Schnitzel',
                                 price: 69,
                                 cart:0
                             },
@@ -73,7 +73,7 @@
             {
                                     name:'White Pizze',
                                     imgSrc:"images/menu/white-pizza.jpg",
-                                    description: 'Pizza in white sauce, served with crumbled feta cheese and potatoes',
+                                    description: 'White sauce pizza, with Goat Cheese',
                                     price: 55,
                                     cart:0
 
@@ -82,7 +82,7 @@
             {
                                     name:'Pepperoni Pizza',
                                     imgSrc:"images/menu/pepperoni.jpg",
-                                    description: 'Pepperoni pizza, is served with pepperoni, spinach and lots of cheese',
+                                    description: 'Pizza with extra Pepperoni, spinach, and lots of cheese',
                                     price: 65,
                                     cart:0
 
@@ -91,7 +91,7 @@
             {
                                     name:'Margarita Pizza',
                                     imgSrc:"images/menu/margarita.jpg",
-                                    description: 'Pizza margarita with mozzarella cheese and excellent tomato sauce',
+                                    description: 'Pizza margarita with mozzarella cheese and tomato sauce',
                                     price: 49,
                                     cart:0
 
@@ -101,7 +101,7 @@
            {
                                         name:'Pasta Alfredo',
                                     imgSrc:"images/menu/alfredo-pasta.jpg",
-                                    description: 'Alfredo fettuccine pasta in a cream sauce with lots of parmesan and nuts',
+                                    description: 'pasta in a cream sauce with parmesan cheese and nuts',
                                     price: 59  ,
                                     cart:0
             
@@ -109,7 +109,7 @@
             {
                                         name:'Pasta Tomato',
                                     imgSrc:"images/menu/tomato-pasta.jpg" ,
-                                    description: 'Pasta in a sweet tomato sauce with garlic parmesan and basil',
+                                    description: 'Pasta in tomato sauce with parmesan and basil',
                                     price: 49,
                                     cart:0
 
@@ -117,7 +117,7 @@
 
             {                        name:'Pasta Pasto',
                                       imgSrc:"images/menu/pasta-pasto.jpg",
-                                    description: 'Pasta in a cream pesto sauce with cherry tomatoes, broccoli and spinach',
+                                    description: 'Pasta in a cream pesto sauce with cherry tomatoes and spinach',
                                     price:69,  
                                     cart:0
     
@@ -182,16 +182,16 @@
             ],
             drinks:[
                 {
-                    name:'Aperol',
+                    name:'Aperol Spritz',
                     imgSrc:'images/menu/Aperol.jpg',
-                    description:'Aperol with ice mint and orange on top',
+                    description:'Classic Aperol Spritz',
                     price:35 , 
                     cart:0
 
                 
                 },
                 {
-                    name:'Merlot',
+                    name:'Dry Merlot',
                     imgSrc:'images/menu/Merlot.jpg',
                     description:'Dry merlot in a special edition',
                     price:29 ,
@@ -209,7 +209,7 @@
                 {
                     name:'Margarita',
                     imgSrc:'images/menu/white-Margarita.jpg',
-                    description:'Ground pineapple margarita with ice, and mint on top',
+                    description:'Classic Pineapple Margarita',
                     price:41 ,   
                     cart:0
               
@@ -217,7 +217,7 @@
                 {
                     name:'Rupinio',
                     imgSrc:'images/menu/Rupinio.jpg',
-                    description:'Ropinho half dry ',
+                    description:'Italian Ropinho half dry ',
                     price:33 ,  
                     cart:0
            
@@ -226,15 +226,15 @@
                 {
                     name:'S & S-cocktail',
                     imgSrc:'images/menu/S&S-cocktail.jpg',
-                    description:'A special fortified cocktail with lots of surprises inside',
+                    description:'A special fortified cocktail',
                     price:44 ,
                     cart:0
          
                 },
                 {
-                    name:'Whiskey',
+                    name:'Scotch ',
                     imgSrc:'images/menu/scotch.jpg',
-                    description:'Johnny Walker Whiskey',
+                    description:'Johnny Walker Scotch ',
                     price:42  ,   
                     cart:0
             
@@ -242,7 +242,7 @@
                 {
                     name:'Woodbridge',
                     imgSrc:'images/menu/Woodbridge.jpg',
-                    description:'Woodberg red, especially light',
+                    description:'Woodberg, Extremely light',
                     price:31 ,  
                     cart:0
         

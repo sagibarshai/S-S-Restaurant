@@ -21,13 +21,12 @@ return(
         sum +=dessert.price
         localStorage.setItem('cartSum', sum)
         setCartSumIsUpdate(()=>true)
-
             }}>
     <svg className='cart-icon'> 
     <use xlinkHref="images/icons/sprite.svg#icon-cart-plus"></use>
     </svg>
   </button>
-  <span className='button'>Add To Cart</span>
+  <span className='button-text'>Add To Cart</span>
     </div>
     
 </div>

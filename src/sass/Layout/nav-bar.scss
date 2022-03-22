@@ -1,24 +1,33 @@
 .navbar{
 
     &__container{
-
-        background-color: rgba(#d7bcb2, .9);
+        font-family: 'Spartan', sans-serif;
+        background-color: rgba(#d7bcb2, 1);
         width: 70%;
         min-height: 10vh;
         position: fixed;
-        z-index: 1;
+        z-index: 10;
         top:8%;
         left:50%;
         transform: translate(-50%,-50%);  
         display: flex; 
         justify-content: space-around;
         border-radius: 5rem;
+        @media (max-width:1300px) {
+            width: 90%;
+        }
+        @media (max-width:1000px) {
+            width: 95%;
+        }
+        
+        
+        
     }
 &__link{
     position: relative;
     top:50%;
     font-size: 1.6rem;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700;
     text-decoration: none;
     color:#3e160b;
     border-bottom: white 1px solid;
@@ -26,14 +35,45 @@
     line-height: 4rem;
     font-weight: 900;
     transition: all .8s;
+    cursor: pointer;
+    @media (max-width:1300px) {
+        font-size: 2.25rem;
+    }
+    @media (max-width:1000px) {
+    font-size: 2.5rem;
+    }
+    @media (max-width:600px) {
+        &-location {
+          display: none;  
+        }
+    }
+    @media (min-width:1000px) {
+    font-size:2rem ;
+    }
+    @media (min-width:1300px) {
+    font-size:1.8rem ;
+    }
+    @media (min-width:1750px) {
+    font-size:2rem ;
+    }
+    @media (min-width:2000px) {
+        font-size: 2.25rem;
+    }
+    @media (min-width:2400px) {
+        font-size: 2.5rem;
+    }
+    @media (min-width:2750px) {
+        font-size: 2.75rem;
+    }
+
     
-    &:hover{
+    &:hover, :link , :active , :focus{
         background-image: linear-gradient(to left ,  rgb(109, 31, 48),rgb(68, 159, 187));
         -webkit-background-clip: text;
         color: transparent;
         display: inline-block;
         font-weight: 1000;
-        font-size: 1.9rem;
+        transform: scale(1.1);
     }
 }
 }

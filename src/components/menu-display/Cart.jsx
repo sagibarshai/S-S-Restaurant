@@ -14,13 +14,10 @@ const moveToPayHandler = () => {
 const backToEditHandler = () => {
     setMoveToPay(()=>false)
 }
-
-
-
 return <div>
 {<div className="cart-popup__container">
-{allStorage() <= 0 && !formIsValid&& <p className="cart-popup__empty-cart">No Items In Cart!</p>}
 { displayCart && <button className="cart-popup__exit-button" onClick={displayCartHandler}>X</button>}
+{allStorage() <= 0 && !formIsValid&& <p className="cart-popup__empty-cart">No Items In Cart!</p>}
 {!moveToPay&& <div>
 {allFood.map((food,indx) => {
     if(localStorage.getItem(food.name) > 0) {
@@ -38,9 +35,6 @@ return <div>
             sum+= food.price
             localStorage.setItem('cartSum', sum)
             setCartSumIsUpdate(()=>true)
-            
-
-
 }}>+</button>
         <button className="cart-item__button" onClick={()=> {
              if(foodCart <= 0) {
@@ -156,7 +150,6 @@ return <div>
 
 })
 } 
-
 {sum > 0 && <div>
     <b className="cart-popup__total-sum">Amount to pay : {sum}₪</b>
 <button className="cart-popup__button-pay" onClick={moveToPayHandler}>Pay Now</button>
@@ -172,7 +165,6 @@ return <div>
     </div>}
 </div>  
 }
-{/* {formIsValid && window.location.reload()} */}
 </div>  
 
 }

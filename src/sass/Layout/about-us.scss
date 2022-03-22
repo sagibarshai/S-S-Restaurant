@@ -1,11 +1,13 @@
 .about{
-min-height: 45vh;
+min-height: 20vh;
 width: 100%;
-font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'Spartan', sans-serif;
 margin:0 auto;
 position: relative;
+font-weight: 700;
 &__title{
     text-transform: uppercase;
+    text-align: center;
     font-size: 3rem;
     letter-spacing: .5rem;
     opacity: 0.9;
@@ -14,9 +16,40 @@ position: relative;
     top:0;
     left: 50%;
     transform: translate(-50%,-50%);
-    
-    
-    &:hover{
+    @media (max-width:1300px) {
+        font-size: 2.75rem;
+    }
+    @media (max-width:1000px) {
+        font-size: 3rem;
+        width: 100%;  
+    }
+    @media (max-width:800px) {
+        font-size: 2.3rem;
+        width: 100%;  
+    }
+    @media (max-width:550px) {
+        margin-left:3rem;
+    }
+        @media (max-width:600px) {
+        padding: 10rem 0 15rem 0;
+        }
+    @media (min-width:1300px) {
+        font-size: 2.75rem;
+        margin-top:7.5rem
+    }
+    @media (min-width:1750px) {
+        font-size: 3rem;
+    }
+    @media (min-width:2000px) {
+        font-size: 3.25rem;
+    }
+    @media (min-width:2400px) {
+        font-size: 3.5rem;
+    }
+    @media (min-width:2750px) {
+        font-size: 3.75rem;
+    }
+    &:hover , :active , :link , :focus{
         opacity: 1;
         background-image: linear-gradient(to left ,  rgb(109, 31, 48),rgb(68, 159, 187));
         -webkit-background-clip: text;
@@ -30,26 +63,144 @@ position: relative;
 &__content{
     font-size: 2.5rem;
     width: 35%; 
-    padding: 20rem 0;
     line-height: 5rem;
+    @media (max-width:1300px) {
+    padding: 0rem 0 20rem 0;
+    }
+    @media (max-width:800px) {
+    padding: 0rem 0 45rem 0;
+    }
+    
+
+    @media (min-width:1300px) {
+        padding: 40rem 0;
+    }
+    @media (min-width:2750px) {
+        padding: 35rem 0;
+    }
+    
 }
 &__chef{
     position: absolute;
-    top:20%;
+    top:25%;
     left:5%;
-    max-width: 40%;
-    min-height: 80%;
+    width: 42.5%;
     line-height: 50px;
+    height: auto;
+    @media (max-width:1000px) {
+        width: 37.5%;
+        }
+    @media (max-width:800px) {
+        width: 80%;
+        display: block;
+        top:125%;
+        left:15%;
+        }
+    @media (max-width:600px) {
+        width: 100%;
+        display: block;
+        top:135%;
+        left:15%;
+        }
+        @media (max-width:520px) {
+        width: 100%;
+        display: block;
+        top:155%;
+        left:15%;
+        }
+        @media (max-width:400px) {
+            width: 100%;
+            display: block;
+            top:180%;
+            left:15%;
+        }
+        @media (max-width:370px) {
+            width: 100%;
+            display: block;
+            top:220%;
+            left:15%;
+        }
+        @media (max-width:300px) {
+            width: 100%;
+            display: block;
+            top:250%;
+            left:15%;
+        }
 
+    @media (min-width:1300px) {
+        font-size: 2.25rem;
+        line-height: 4.5rem;
+    }
+    // @media (min-width:1750px) {
+    //     font-size: 2.5rem;
+    //     line-height: 5rem;
+    // }
+    @media (min-width:1750px) {
+        font-size: 2.75rem;
+        line-height: 5.5rem;
+    }
+    @media (min-width:2000px) {
+        font-size: 3rem;
+        line-height: 6rem;
+    }
+    @media (min-width:2400px) {
+        font-size:3.25rem;
+     line-height: 6.5rem;
+    }
+    @media (min-width:2750px) {
+        font-size:3,5rem;
+        letter-spacing: 4px;
+        line-height: 7rem;
+    }
+    
+    
 }
 
 &__restaurant{
-position: absolute;
-top:20%;
-left:50%;
-max-width: 40%;
-min-height: 80%;
-
+    position: absolute;
+    top:25%;
+    left:50%;
+    width: 42.5%;
+    min-height: 30%;
+    @media (max-width:1000px) {
+    width: 45%;
+    }
+    @media (max-width:800px) {
+        width: 80%;
+        display: block;
+        left:15%;
+        }
+    @media (max-width:600px) {
+        width: 100%;
+        display: block;
+        top:15%;
+        }
+      
+    @media (min-width:1300px) {
+        font-size: 2.25rem;
+        line-height: 4.5rem;
+    }
+    @media (min-width:1750px) {
+        font-size: 2.5rem;
+        line-height: 5rem;
+    }
+    @media (min-width:1750px) {
+        font-size: 2.75rem;
+        line-height: 5.5rem;
+    }
+    @media (min-width:2000px) {
+        font-size: 3rem;
+        line-height: 6rem;
+    }
+    @media (min-width:2400px) {
+        font-size:3.25rem;
+     line-height: 6.5rem;
+    }
+    @media (min-width:2750px) {
+        font-size:3,5rem;
+        letter-spacing: 4px;
+        line-height: 7rem;
+    }
 
 }
 

@@ -27,7 +27,7 @@ const DisplayMainFood = ({setCartIsUpdate,cartIsUpdate, setCartSumIsUpdate ,sum 
             <use xlinkHref="images/icons/sprite.svg#icon-cart-plus"></use>
             </svg>
           </button>
-          <span className='button'>Add To Cart</span>
+          <span className='button-text'>Add To Cart</span>
             </div>
             
         </div>

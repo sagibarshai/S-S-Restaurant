@@ -56,14 +56,11 @@ return <div className='container'onClick={()=>formIsValid && window.location.rel
     <div>
     <h1 className='food-menu__title'>Menu </h1>
     <h3 className='food-menu__subtitle'> We offer a wide range of dishes of the highest quality.
-
 All dishes are made from fresh ingredients.
 And all this to ensure a great experience </h3>
-        
     <div className='flex-box'>
 
     <a className='button' onClick={displayFoodHandler} href="#food" onChange={()=>{return console.log('hello')}}>
-        
         <img src='images/menu/burger.jpg' alt="pasta" className="img-button"/>
         <span className='inner-text'>Food</span>
     </a>
@@ -76,6 +73,8 @@ And all this to ensure a great experience </h3>
         <img src='images/menu/caramel-cake.jpg' alt="dessert" className="img-button"/>
         <span className='inner-text'>Dessert</span>
     </a>
+    </div>
+    <div className='flex-box'>
          <DisplayMenu showFoodMenu= {showFoodMenu} showDessertsMenu={showDessertsMenu} showDrinksMenu={showDrinksMenu} setCartIsUpdate={setCartIsUpdate} cartIsUpdate={cartIsUpdate} setCartSumIsUpdate={setCartSumIsUpdate} cartSumIsUpdate={cartSumIsUpdate} sum={sum}/>
     </div>
     </div>

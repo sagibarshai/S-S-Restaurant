@@ -2,22 +2,118 @@
     width: 100%;
     height: 80vh;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
-    margin: 10rem auto;
+    margin:0 auto;
+    @media (max-width:1300px) {
+        // margin: 20rem auto 20rem auto;
+        flex-direction: row;
+        // display:grid;
+        margin: 40rem auto 10rem auto;
+    }
+    @media (max-width:1000px) {
+        margin: 60rem auto -15rem auto;
+        flex-direction: row;
+        // display:grid;
+    }
+    @media (max-width:800px) {
+        margin: 60rem auto 70rem auto;
+        flex-direction: row;
+        // display:grid;
+    }
+    @media (max-width:600px) {
+        margin: 70rem auto 70rem auto;
+     }
+     @media (max-width:400px) {
+        margin:90rem auto 120rem auto; 
+    }
+    @media (max-width:370px) {
+        margin:100rem auto 90rem auto; 
+
+    }
+    @media (max-width:300px) {
+        margin:140rem auto 90rem auto; 
+
+    }
+     @media (min-width:1000px) {
+         margin: 50rem auto -30rem auto;
+        }
+        @media (min-width:1300px) {
+            margin: 0 auto 0 auto;
+         }
+        @media (min-width:1550px) {
+            margin: 0 auto 10rem auto;
+         }
+    
 }
 .image-item{
-    margin:2rem;
+    // margin:2rem;
     width: 22%;
-    height:55%;
+    // height:55%;
     border-radius: 150%;
     transition: all .5s;
-    margin-top: 10rem;
-    &:hover{
+    // margin-top: 8rem;
+    &-1{
+        object-fit:cover;
+    }
+    &:hover , :active , :link , :focus{
         transform: scale(105%);
         opacity: .5;
-        box-shadow: rgba(lightgrey,.4) 3rem 3rem 2rem;
+        box-shadow: rgba(lightgrey,.4) 3rem 3rem 2rem;   
+    }
+    @media (max-width:1300px) {
+        margin: 0rem 0;
+        width: 30rem;
+        height:30rem;
+    }
+    @media (max-width:1000px) {
+        margin: 10rem 0 0 0;
+        width: 25rem;
+        height:25rem;
+    }
+    @media (max-width:800px) {
+       width: 40rem;
+       height: 36rem;
+       margin:5rem auto;
+    }
+    @media (max-width:500px) {
+        width: 32rem;
+        height: 28rem;
+        margin:7rem auto;
+    }
+    @media (max-width:400px) {
+        width: 30rem;
+        height: 26rem;
+        margin:20rem auto 10rem auto;
+    }
+
+    @media (min-width:1300px) {
+        width: 30rem;
+        height:30rem;
+        margin: 5rem 0 0 0;
+
+    }
+    @media (min-width:1550px) {
+        width: 26.5%;
+        height:40%;
+    }
+    @media (min-width:1750px) {
+        width: 26.5%;
+        height:42.5%;
+    }
+    @media (min-width:2000px) {
+        width: 26.5%;
+        height:47.5%;
         
+    }
+    @media (min-width:2400px) {
+        width: 26.5%;
+        height:55%;
+        
+    }
+    @media (min-width:2750px) {
+        width: 27%;
+        height:63%;
     }
 
 }
