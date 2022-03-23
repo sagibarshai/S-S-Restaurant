@@ -36,21 +36,24 @@
         border-radius: 60px;
         @media (max-width:1000px) {
         height: 75%;
+        margin-left:-2rem;
         }
         @media (max-width:800px) {
         height: 70%;
+        margin-left:-1.5rem;
+
         }
         @media (max-width:600px) {
         height: 70%;
-        margin-left:4rem;
+        margin-left:-1rem;
         }
         @media (max-width:500px) {
         height: 65%;
-        margin-left:3.5rem;
+        margin-left:-1rem;
         }
         @media (max-width:400px) {
         height: 60%;
-        margin-left:2.5rem;
+        margin-left:-1rem;
         }
         &:hover , :link , :active , :focus{
             opacity: 1;
@@ -71,16 +74,29 @@
         font-family: 'Estonia', cursive;
         animation: moveFromTop 2s;
         @media (max-width:1300px) {
-        font-size: 5rem;            }
+        font-size: 5rem;    
+        left:30%;        }
+        @media (max-width:1200px) {
+        font-size: 5rem;    
+        left:28%;        }
         @media (max-width:1000px) {
-        font-size: 4.5rem;            }
+        font-size: 4.5rem;       
+        left:25%;     }
         @media (max-width:800px) {
         font-size: 4rem;  
-    // width: 50%;          
-}
+        left:20%;
+    }
+        @media (max-width:650px) {
+        font-size: 4rem;  
+        left:17.5%;
+    }
         @media (max-width:500px) {
         font-size: 3.6rem;  
-    // width: 50%;         
+        left:15%;
+ }
+        @media (max-width:400px) {
+        font-size: 2.8rem;  
+        left:5%;
  }
         @media (min-width:1300px) {
             font-size: 5rem;
